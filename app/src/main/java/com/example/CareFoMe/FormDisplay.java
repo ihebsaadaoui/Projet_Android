@@ -97,7 +97,24 @@ public class FormDisplay extends AppCompatActivity {
         });
         AlertDialog dialog = builder.create();
 
-      
+        btnNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println(NotificationID.getID());
+                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
+                        FormDisplay.this,"notification");
+                mBuilder.setSmallIcon(R.drawable.ic_launcher_background);
+                mBuilder.setContentTitle("HEllo MR/MRS: "+NameP);
+                mBuilder.setContentText("Your appointment will be "+DateA+" at "+AptTime);
+                mBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                mBuilder.setAutoCancel(true);
+                NotificationManagerCompat notificationManager =
+                        NotificationManagerCompat.from(FormDisplay.this);
+                notificationManager.notify(NotificationID.getID(),mBuilder.build());
+
+            }
+        });
+
 
 
     }
