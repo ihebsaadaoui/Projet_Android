@@ -99,29 +99,6 @@ public class CustomAdapterFav extends RecyclerView.Adapter<CustomAdapterFav.List
     }
 
 
-    @Override
-    public int getItemCount() {
-        return dataList.size();
-    }
-
-    class ListViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_name;
-        TextView mobile;
-        Button iv_book;
-        ImageView iv_whitefav;
-
-
-        public ListViewHolder(View itemView) {
-            super(itemView);
-
-            context = (Context)  itemView.getContext();
-            tv_name = (TextView) itemView.findViewById(R.id.textViewTV);
-            mobile = (TextView) itemView.findViewById(R.id.mobile);
-            iv_book= (Button) itemView.findViewById(R.id.imageViewbook);
-
-
-        }
-    }
-
+   
 
 }
